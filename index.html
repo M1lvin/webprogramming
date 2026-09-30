@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <style>
+        /* Немного CSS, чтобы страница не выглядела как текст из 1990-х */
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; background: #f4f4f4; padding: 20px; border-radius: 8px; }
+        img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; }
+        section { margin: 20px 0; }
+        .socials a { margin-right: 15px; text-decoration: none; color: blue; font-weight: bold; }
+        form { display: flex; flex-direction: column; gap: 10px; max-width: 300px; }
+        input, button { padding: 8px; }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Семантический тег: Header -->
+    <header>
+        <img src="https://via.placeholder.com/150" alt="Student Photo">
+        <h1>Alex Johnson</h1>
+        <p>Future Full-Stack Developer | Student at University X</p>
+    </header>
+
+    <!-- 2. Семантический тег: Main -->
+    <main>
+        
+        <!-- 3. Семантический тег: Section -->
+        <section>
+            <h2>About Me</h2>
+            <p>Hello! I am a passionate computer science student learning web development. I love solving problems and building cool projects. Currently focusing on HTML, CSS, and JavaScript.</p>
+        </section>
+
+        <section>
+            <h2>Connect with Me</h2>
+            <div class="socials">
+                <!-- Dummy links as requested -->
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Me</h2>
+            <form action="#">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- 4. Семантический тег: Footer -->
+    <footer>
+        <p style="text-align: center; font-size: 0.8em; color: gray;">&copy; 2023 Alex Johnson. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
