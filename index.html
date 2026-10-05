@@ -1,78 +1,124 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Профиль - Эгембергенов Дастан</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
-        header { text-align: center; background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        /* Стили для фото Ким Чен Ына */
-        img { border-radius: 50%; width: 180px; height: 180px; object-fit: cover; border: 4px solid #333; }
-        section { background: #ffffff; margin: 20px 0; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .socials a { display: inline-block; margin-right: 15px; text-decoration: none; color: white; background: #333; padding: 8px 15px; border-radius: 5px; font-weight: bold; }
-        .socials a:hover { background: #555; }
-        form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
-        input, button { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
-        button { background: #28a745; color: white; border: none; cursor: pointer; font-weight: bold; }
-        button:hover { background: #218838; }
-        .phone { font-size: 1.2em; font-weight: bold; color: #007bff; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignments: Dastan Egembergenov</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0d1117;
+      color: #f0f6fc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    h1 {
+      margin: 0 0 32px;
+      font-size: 2rem;
+    }
+
+    .sections {
+      display: grid;
+      gap: 24px;
+    }
+
+    section {
+      padding: 24px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 1.25rem;
+    }
+
+    .assignments {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .assignments a {
+      display: block;
+      padding: 12px 10px;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      background: #21262d;
+      color: #f0f6fc;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 140ms ease;
+    }
+
+    .assignments a:hover,
+    .assignments a:focus-visible {
+      background: #30363d;
+    }
+
+    .assignments a:focus-visible {
+      outline: 2px solid #58a6ff;
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 700px) {
+      .assignments { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 420px) {
+      body { padding: 32px 16px; }
+      section { padding: 18px; }
+      .assignments { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
 </head>
 <body>
-
-    <!-- Семантический тег: Header -->
-    <header>
-        <!-- Фото Ким Чен Ына -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Kim_Jong_Un_2020.jpg/800px-Kim_Jong_Un_2020.jpg" alt="Фото профиля">
-        <h1>Эгембергенов Дастан</h1>
-        <p>Студент 2 курса колледжа | 17 лет</p>
-        <p><strong>Направление:</strong> Software Engineering</p>
-    </header>
-
-    <!-- Семантический тег: Main -->
-    <main>
-        
-        <!-- Семантический тег: Section -->
-        <section>
-            <h2>Обо мне</h2>
-            <p>Привет! Меня зовут Дастан. Мне 17 лет, я учусь на втором курсе колледжа по направлению Software Engineering. Увлекаюсь программированием, веб-разработкой и изучением новых технологий.</p>
-        </section>
-
-        <section>
-            <h2>Мои соцсети</h2>
-            <div class="socials">
-                <!-- Придуманные ссылки, как ты и просил -->
-                <a href="https://github.com/dastan_dev" target="_blank">GitHub</a>
-                <a href="https://t.me/dastan_se" target="_blank">Telegram</a>
-                <a href="https://linkedin.com/in/dastan" target="_blank">LinkedIn</a>
-            </div>
-        </section>
-
-        <section>
-            <h2>Контакты</h2>
-            <!-- Добавил твой номер -->
-            <p>Телефон: <span class="phone">+996 550 565 607</span></p>
-            
-            <h3>Написать мне:</h3>
-            <form action="#">
-                <label for="name">Ваше имя:</label>
-                <input type="text" id="name" name="name" placeholder="Введите имя" required>
-
-                <label for="email">Ваш Email:</label>
-                <input type="email" id="email" name="email" placeholder="Введите email" required>
-
-                <button type="submit">Отправить</button>
-            </form>
-        </section>
-
-    </main>
-
-    <!-- Семантический тег: Footer -->
-    <footer>
-        <p style="text-align: center; font-size: 0.8em; color: gray;">&copy; 2023 Эгембергенов Дастан. Все права защищены.</p>
-    </footer>
-
+  <h1>Assignments: Dastan Egembergenov</h1>
+  <main class="sections">
+    <section aria-labelledby="section1-title">
+      <h2 id="section1-title">Section 1</h2>
+      <nav class="assignments" aria-label="Section 1 assignments">
+        <a href="section1/assignment1/index.html">Assignment 1</a>
+        <a href="section1/assignment2/index.html">Assignment 2</a>
+        <a href="section1/assignment3/index.html">Assignment 3</a>
+        <a href="section1/assignment4/index.html">Assignment 4</a>
+        <a href="section1/assignment5/index.html">Assignment 5</a>
+        <a href="section1/assignment6/index.html">Assignment 6</a>
+        <a href="section1/assignment7/index.html">Assignment 7</a>
+        <a href="section1/assignment8/index.html">Assignment 8</a>
+        <a href="section1/assignment9/index.html">Assignment 9</a>
+        <a href="section1/assignment10/index.html">Assignment 10</a>
+        <a href="section1/assignment11/index.html">Assignment 11</a>
+        <a href="section1/assignment12/index.html">Assignment 12</a>
+        <a href="section1/assignment13/index.html">Assignment 13</a>
+        <a href="section1/assignment14/index.html">Assignment 14</a>
+        <a href="section1/assignment15/index.html">Assignment 15</a>
+        <a href="section1/assignment16/index.html">Assignment 16</a>
+        <a href="section1/assignment17/index.html">Assignment 17</a>
+        <a href="section1/assignment18/index.html">Assignment 18</a>
+        <a href="section1/assignment19/index.html">Assignment 19</a>
+        <a href="section1/assignment20/index.html">Assignment 20</a>
+      </nav>
+    </section>
+    <section aria-labelledby="section2-title">
+      <h2 id="section2-title">Section 2</h2>
+      <nav class="assignments" aria-label="Section 2 assignments">
+        <a href="section2/assignment1/index.html">Assignment 1</a>
+        <a href="section2/assignment2/index.html">Assignment 2</a>
+        <a href="section2/assignment3/index.html">Assignment 3</a>
+        <a href="section2/assignment4/index.html">Assignment 4</a>
+        <a href="section2/assignment5/index.html">Assignment 5</a>
+      </nav>
+    </section>
+  </main>
 </body>
 </html>
